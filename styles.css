@@ -101,18 +101,20 @@ body, html {
 #segment1 {
   position: relative;
   background-color: #ff9999;
+
   height: 15%;
 }
 
 #segment2 {
+
   position: relative;
   background-color: #99ff99;
+
   height: 70%;
 }
 
 #segment3 {
   position: relative;
-  background-color: #9999ff;
   height: 15%;
 }
 
@@ -187,3 +189,4 @@ ol li {
   font-size: 24px;
 
 }
+
