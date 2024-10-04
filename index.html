@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Variant-16</title>
+  <title>Without Flexbox and Grid</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,22 +11,20 @@
   <div class="left-segment">
     <div class="segment" id="segment1">
       <div>
-        <h1 id="heading-X">Image Map</h1>
+        <h1 id="heading-X">Without Grid and Flexbox</h1>
       </div>
     </div>
 
     <div class="segment" id="segment2">
       <img class="img-map" src="coral-fill.png" usemap="#image-map" alt="Clickable Map">
       <map name="image-map">
-        <area shape="rect" coords="0,0,50,50" href="page2.html" alt="Page 2">
-        <area shape="rect" coords="50,0,100,50" href="page3.html" alt="Page 3">
-        <area shape="rect" coords="0,50,50,100" href="page4.html" alt="Page 4">
-        <area shape="rect" coords="50,50,100,100" href="page5.html" alt="Page 5">
+        <area shape="rect" coords="0,0,50,50" href="index.html" alt="Without Grid and Flexbox">
+        <area shape="rect" coords="50,0,100,50" href="page2.html" alt="Flexbox">
+        <area shape="rect" coords="0,50,100,100" href="page3.html" alt="Grid">
       </map>
-      <div class="area-container" id="container-1">Page 2</div>
-      <div class="area-container" id="container-2">Page 3</div>
-      <div class="area-container" id="container-3">Page 4</div>
-      <div class="area-container" id="container-4">Page 5</div>
+      <div class="area-container" id="container-1">Without Grid and Flexbox</div>
+      <div class="area-container" id="container-2">Flexbox</div>
+      <div class="area-container" id="container-3">Grid</div>
     </div>
 
     <div class="segment" id="segment3">
@@ -42,11 +40,9 @@
     <div class="segment" id="segment4">
       <nav id="menu">
         <ul>
-          <li><a href="index.html">Page 1</a></li>
-          <li><a href="page2.html">Page 2</a></li>
-          <li><a href="page3.html">Page 3</a></li>
-          <li><a href="page4.html">Page 4</a></li>
-          <li><a href="page5.html">Page 5</a></li>
+          <li><a href="index.html">None</a></li>
+          <li><a href="page2.html">Flexbox</a></li>
+          <li><a href="page3.html">Grid</a></li>
         </ul>
       </nav>
     </div>
@@ -57,6 +53,7 @@
 </div>
 </body>
 </html>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const img = document.querySelector("#segment2 img");
@@ -68,8 +65,8 @@
 
       areas[0].coords = `0,0,${imgWidth / 2},${imgHeight / 2}`;
       areas[1].coords = `${imgWidth / 2},0,${imgWidth},${imgHeight / 2}`;
-      areas[2].coords = `0,${imgHeight / 2},${imgWidth / 2},${imgHeight}`;
-      areas[3].coords = `${imgWidth / 2},${imgHeight / 2},${imgWidth},${imgHeight}`;
+      areas[2].coords = `0,${imgHeight / 2},${imgWidth},${imgHeight}`;
+
     }
 
     img.onload = updateMapCoords;

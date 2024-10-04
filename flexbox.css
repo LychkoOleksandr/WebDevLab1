@@ -10,31 +10,55 @@ body, html {
 }
 
 .container {
+  display: flex;
   height: 100vh;
   width: 100vw;
+}
+
+.left-segment {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.middle-segment {
+  width: 5%;
+  background-color: #f0f0f0;
+}
+
+.right-segment {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 
 .segment {
   border: solid 1px black;
 }
 
-.left-segment {
-  width: 70%;
-  height: 100%;
-  float: left;
+#segment1, #segment3 {
+  flex: 0 0 15%;
+  background-color: #ff9999;
+  position: relative;
 }
 
-.middle-segment {
-  width: 5%;
-  height: 100%;
-  float: left;
-  background-color: #f0f0f0;
+#segment2 {
+  flex: 1;
+  background-color: #ffff99;
+  position: relative;
+  overflow: hidden;
 }
 
-.right-segment {
-  width: 25%;
-  height: 100%;
-  float: left;
+#segment4 {
+  flex: 0 0 85%;
+  background-color: #ffff99;
+  text-align: center;
+  position: relative;
+}
+
+#segment5 {
+  flex: 0 0 15%;
+  background-color: #ff9999;
 }
 
 .text-containing-segment {
@@ -49,13 +73,12 @@ body, html {
   background-color: rgba(255, 255, 255, 0.5);
   align-content: center;
   text-align: center;
-  box-sizing: border-box;
   font-size: 36px;
   color: #333;
   pointer-events: none;
 }
 
-.img-segment img{
+.img-segment img {
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -86,41 +109,6 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-#segment2 a{
-  font-size: 36px;
-}
-
-#segment1 {
-  position: relative;
-  background-color: #ff9999;
-
-  height: 15%;
-}
-
-#segment2 {
-
-  position: relative;
-  background-color: #ffff99;
-  height: 70%;
-}
-
-#segment3 {
-  position: relative;
-  background-color: #ff9999;
-  height: 15%;
-}
-
-#segment4 {
-  background-color: #ffff99;
-  height: 85%;
-  text-align: center;
-  position: relative;
-}
-
-#segment5 {
-  background-color: #ff9999;
-  height: 15%;
 }
 
 #image-map {
@@ -176,10 +164,3 @@ nav#menu ul li a {
 nav#menu ul li a:hover {
   background-color: #ddd;
 }
-
-ol li {
-  margin: 30px 0;
-  font-size: 24px;
-
-}
-
