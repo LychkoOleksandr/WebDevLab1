@@ -1,6 +1,5 @@
 * {
   color: #333333;
->>>>>>>>> Temporary merge branch 2
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -95,6 +94,7 @@ body, html {
   height: 100%;
   object-fit: cover;
 }
+
 #segment2 a{
   font-size: 36px;
 }
@@ -186,5 +186,4 @@ nav#menu ul li a:hover {
 ol li {
   margin: 30px 0;
   font-size: 24px;
-
 }
